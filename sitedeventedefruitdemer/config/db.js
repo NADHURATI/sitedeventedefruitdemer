@@ -1,14 +1,17 @@
-const express = require("express");
-const axios = require('axios').defaults;
 
-const mysql = require('mysql2')
+
+const mysql = require('mysql2');
+
 const db = mysql.createConnection({
-host: "localhost",
-user: "root",
-password: "Saindoumy15@e",
-port:3306,
-database:"fruit_de_mer" 
-})
+    host: 'localhost',
+    user: 'root',
+    password: 'Saindoumy15@e',
+    database: 'fruit_de_mer'
+});
+
+db.connect(err => {
+    if (err) throw err;
+    console.log('Connexion à la base de données réussie');
+});
 
 module.exports = db;
-
