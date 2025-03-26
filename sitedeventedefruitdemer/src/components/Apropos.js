@@ -1,6 +1,6 @@
 // src/pages/APropos.js
 import React from "react";
-import "../styles/Apropos.css"; // Assure-toi d'importer ton fichier CSS pour cette page
+import "../styles/apropos.css"; // Assure-toi d'importer ton fichier CSS pour cette page
 import Chef from "../assets/images/Chef.jpeg";
 import Vendeuse from '../assets/images/Vendeuse.webp';
 import Livreur from '../assets/images/Livreur.jpg';

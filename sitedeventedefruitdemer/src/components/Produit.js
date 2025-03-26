@@ -1,6 +1,6 @@
 // src/pages/Produits.js
 import React from "react";
-import "../styles/Produit.css"; // Assure-toi d'importer ton fichier CSS
+import "../styles/produit.css"; // Assure-toi d'importer ton fichier CSS
 import poulpe from '../assets/images/poulpe.png';
 import trondro from '../assets/images/Trondro.jpg';
 import kamara from '../assets/images/Kamara.jpg';

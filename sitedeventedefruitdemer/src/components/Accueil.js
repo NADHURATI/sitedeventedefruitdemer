@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Accueil.css";  // Import du fichier CSS
+import "../styles/accueil.css";  // Import du fichier CSS
 import poulpe from '../assets/images/photo bigorno et poulpe.jpg';  // Importation de l'image
 
 const Homepage = () => {
@@ -10,6 +10,7 @@ const Homepage = () => {
                 <a href="#">Produits</a>
                 <a href="#">À propos</a>
                 <a href="#">Contact</a>
+                <a href="#">Paiement</a>
                 <div className="auth-links">
                     <a href="#">Connexion</a>
                     <a href="#">Inscription</a>
