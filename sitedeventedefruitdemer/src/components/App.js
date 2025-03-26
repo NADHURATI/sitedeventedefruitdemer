@@ -5,7 +5,8 @@ import Produit from './Produit'
 import Apropos from './Apropos';
 import Contact from './Contact';
 import Connexion from './Connexion';
-import Inscription from './Inscription'
+import Inscription from './Inscription';
+import Paiement from './Paiement';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Contact />
       <Connexion />
       <Inscription />
+      <Paiement />
       
     </div>
   );
