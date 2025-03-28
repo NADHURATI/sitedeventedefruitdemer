@@ -12,14 +12,14 @@ import Langouste from '../assets/images/Langouste.webp';
 
 const Produits = () => {
   const fruitsDeMer = [
-    { name: 'Poulpe', image: poulpe, price: 40 },
-    { name: 'Trondro', image: trondro, price: 150 },
-    { name: 'Kamara', image: kamara, price: 20 },
-    { name: 'Crabe', image: crabe, price: 17 },
-    { name: 'Crevettes', image: crevettes, price: 12 },
-    { name: 'Calamar', image: Calamar, price: 15 },
-    { name: 'Homard', image: homard, price: 9 },
-    { name: 'Langouste', image: Langouste, price: 19 }
+    { name: 'Poulpe', image: poulpe, price: 30, weight: 7 },
+    { name: 'Trondro', image: trondro, price: 50, weight: 5 },
+    { name: 'Kamara', image: kamara, price: 20, weight: 5 },
+    { name: 'Crabe', image: crabe, price: 17, weight: 3 },
+    { name: 'Crevettes', image: crevettes, price: 12, weight: 2 },
+    { name: 'Calamar', image: Calamar, price: 15, weight: 4},
+    { name: 'Homard', image: homard, price: 9, weight: 4 },
+    { name: 'Langouste', image: Langouste, price: 19, weight: 6 }
   ];
 
   return (
@@ -30,6 +30,7 @@ const Produits = () => {
           <div className="product-card" key={index}>
             <img src={fruit.image} alt={fruit.name} className="product-image" />
             <h2>{fruit.name}</h2>
+            <p>Poids: {fruit.weight} kg</p>
             <p>Prix: {fruit.price} €</p>
             <button className="add-to-cart">Ajouter au panier</button>
           </div>
