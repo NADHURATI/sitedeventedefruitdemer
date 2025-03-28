@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../styles/contact.css";
 
+// Ajoute Font Awesome pour les icônes
+import { FaFacebookF, FaInstagram, FaSnapchatGhost, FaTiktok } from "react-icons/fa";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -21,7 +23,6 @@ const Contact = () => {
       <p>Remplissez ce formulaire et nous vous répondrons dès que possible.</p>
 
       <div className="contact-content">
-
         <form onSubmit={handleSubmit} className="contact-form">
           <label>Nom :</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required />
@@ -40,6 +41,24 @@ const Contact = () => {
 
           <button type="submit">Envoyer</button>
         </form>
+
+        <div className="social-media-links">
+          <p>Suivez-nous sur :</p>
+          <div className="social-icons">
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF size={30} />
+            </a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+              <FaInstagram size={30} />
+            </a>
+            <a href="https://www.snapchat.com" target="_blank" rel="noopener noreferrer">
+              <FaSnapchatGhost size={30} />
+            </a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">
+              <FaTiktok size={30} />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

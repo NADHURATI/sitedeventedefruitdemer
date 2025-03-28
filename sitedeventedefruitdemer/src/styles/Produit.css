@@ -1,55 +1,86 @@
-/* styles/Produits.css */
+/* Styles pour la page des produits */
 .products-page {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .products-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .product-list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Affiche 4 produits par ligne */
-    gap: 20px;
-  }
-  
-  .product-card {
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .product-image {
-    width: 40%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-  }
-  
-  button.add-to-cart {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  button.add-to-cart:hover {
-    background-color: #218838;
-  }
-  
+  text-align: center; /* Centre tout le texte dans la page */
+  padding: 20px; /* Ajoute un espacement de 20px autour du contenu de la page */
+}
+
+/* Styles pour le titre principal */
+h1 {
+  font-size: 2rem; /* Définit la taille de la police pour le titre principal */
+  margin-bottom: 20px; /* Ajoute un espace de 20px sous le titre principal */
+}
+
+/* Styles pour la liste de produits */
+.product-list {
+  display: flex; /* Utilise un conteneur flexible pour disposer les produits en ligne */
+  flex-wrap: wrap; /* Permet aux produits de passer à la ligne suivante si l'espace est insuffisant */
+  justify-content: center; /* Centre les produits horizontalement */
+  gap: 20px; /* Ajoute un espacement de 20px entre les cartes de produits */
+}
+
+/* Styles pour chaque carte de produit */
+.product-card {
+  border: 1px solid #ddd; /* Ajoute une bordure de couleur gris clair autour de chaque carte de produit */
+  border-radius: 8px; /* Arrondit les coins de la carte */
+  width: 280px; /* Définit la largeur des cartes à 250px */
+  padding: 60px; /* Ajoute un espacement intérieur de 20px à l'intérieur de chaque carte */
+  text-align: center; /* Centre le texte à l'intérieur de chaque carte */
+  background-color: #fff; /* Définit la couleur de fond de la carte à blanc */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère autour de la carte pour la faire ressortir */
+  transition: transform 0.2s ease-in-out; /* Ajoute une transition fluide lors du survol de la carte */
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Déplace la carte vers le haut de 5px lorsque l'utilisateur survole la carte */
+}
+
+/* Styles pour l'image des produits */
+.product-image {
+  width: 100%; /* Définit la largeur de l'image à 100% pour qu'elle prenne toute la largeur de la carte */
+  height: auto; /* Garde le ratio de l'image tout en ajustant la hauteur automatiquement */
+  border-radius: 8px; /* Arrondit les coins de l'image */
+  margin-bottom: 10px; /* Ajoute un espace de 10px sous l'image */
+}
+
+/* Styles pour le bouton "Ajouter au panier" */
+.add-to-cart {
+  background-color: #4CAF50; /* Définit la couleur de fond du bouton en vert */
+  color: white; /* Définit la couleur du texte du bouton en blanc */
+  border: none; /* Supprime les bordures du bouton */
+  padding: 10px; /* Ajoute un espacement de 10px autour du texte du bouton */
+  border-radius: 5px; /* Arrondit les coins du bouton */
+  cursor: pointer; /* Change le curseur en pointeur lorsque l'utilisateur survole le bouton */
+  transition: background-color 0.3s ease; /* Ajoute une transition fluide de la couleur de fond lors du survol */
+  margin-bottom: 10px; /* Ajoute un espace de 10px sous le bouton */
+}
+
+.add-to-cart:hover {
+  background-color: #45a049; /* Change la couleur de fond en un vert plus foncé lorsque l'utilisateur survole le bouton */
+}
+
+/* Styles pour le bouton "Explication" */
+.explanation-button {
+  background-color: #007bff; /* Définit la couleur de fond du bouton en bleu */
+  color: white; /* Définit la couleur du texte du bouton en blanc */
+  border: none; /* Supprime les bordures du bouton */
+  padding: 10px; /* Ajoute un espacement de 10px autour du texte du bouton */
+  border-radius: 5px; /* Arrondit les coins du bouton */
+  cursor: pointer; /* Change le curseur en pointeur lorsque l'utilisateur survole le bouton */
+  transition: background-color 0.3s ease; /* Ajoute une transition fluide de la couleur de fond lors du survol */
+}
+
+.explanation-button:hover {
+  background-color: #0056b3; /* Change la couleur de fond en un bleu plus foncé lorsque l'utilisateur survole le bouton */
+}
+
+/* Styles pour la description des produits */
+.product-description {
+  font-size: 1rem; /* Définit la taille de la police de la description à 1rem */
+  color: #555; /* Définit la couleur du texte de la description à un gris foncé */
+  margin-top: 10px; /* Ajoute un espace de 10px au-dessus de la description */
+  padding: 10px; /* Ajoute un espacement de 10px autour du texte de la description */
+  background-color: #f9f9f9; /* Définit la couleur de fond de la description à un gris clair */
+  border-radius: 5px; /* Arrondit les coins de la description */
+  border: 1px solid #ddd; /* Ajoute une bordure grise autour de la description */
+  text-align: left; /* Aligne le texte de la description à gauche */
+}

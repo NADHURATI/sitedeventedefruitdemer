@@ -1,99 +1,85 @@
-/* Style de la navigation */
-.nav {
+/* Styles généraux pour le corps */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* Style de la barre de navigation */
+  .nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: black;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.nav a {
+    color: white;
+  }
+  
+  .nav a {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    margin: 0 15px;
     font-size: 16px;
-}
-
-.nav a:hover {
-    border-radius: 5px;
-}
-
-/* Style pour les liens d'authentification */
-.auth-links {
-    display: flex;
-}
-
-.auth-links a {
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-links a {
     color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 16px;
-}
-
-.auth-links a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* Style de l'en-tête */
-.header {
-    background-size: cover;
-    background-position: center;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .auth-links a:hover {
+    color: #4CAF50; /* Couleur verte pour le survol */
+  }
+  
+  /* Positionnement du logo */
+  .logo img {
+    width: 60px; /* Taille du logo */
+    height: auto;
+    margin-right: 40px;
+  }
+  
+  /* Style de l'en-tête */
+  .header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 50px;
+    background-image: url('https://source.unsplash.com/1600x900/?seafood');
+    background-size: cover;
     color: black;
-    font-family: 'Arial', sans-serif;
-    height: 60vh;  /* Ajuste la hauteur de l'en-tête selon besoin */
     position: relative;
-}
-
-.header h1 {
-    font-size: 3rem;
+  }
+  
+  .header h1 {
+    font-size: 36px;
     margin-bottom: 20px;
-}
-
-.header p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Style de l'image du poulpe */
-.poulpe-image {
-    width: 500px; /* Taille de l'image */
+  }
+  
+  .header p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .poulpe-image {
+    width: 50%;
     height: auto;
     border-radius: 10px;
-    margin-top: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre portée pour un effet 3D */
-    transition: transform 0.3s ease; /* Effet de zoom */
-}
-
-.poulpe-image:hover {
-    transform: scale(1.1); /* Zoom de l'image au survol */
-}
-
-/* Ajout d'un effet de fond d'écran */
-.header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0); /* Assombrir le fond pour rendre le texte plus lisible */
-    z-index: 1;
-}
-
-/* Style pour le footer */
-footer {
-    background-color:black;
+  }
+  
+  /* Style du footer */
+  footer {
+    background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-footer p {
+  }
+  
+  footer p {
     margin: 0;
-}
+    font-size: 14px;
+  }
+  
