@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Déclaration du type de document (HTML5) -->
+
+<html lang="fr">
+<!-- Début du document HTML avec la langue définie sur "fr" (français) -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Définition de l'encodage des caractères en UTF-8 (permet d'afficher correctement les caractères spéciaux comme é, à, ô...) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Permet d'adapter l'affichage du site sur les écrans de différentes tailles (responsive design) -->
+    
+    <title>Liste des clients</title>
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+</head>
+
+<body>
+    <h1>Liste des clients</h1>
+    <!-- Titre principal de la page affiché en grand -->
+
+    <ul>
+        <!-- Début d'une liste non ordonnée pour afficher les clients -->
+
+        <% clients.forEach(client => { %>
+        <!-- Boucle en EJS (Embedded JavaScript) pour parcourir la liste des clients -->
+        
+            <li>
+                <!-- Élément de liste contenant les informations d'un client -->
+                <strong><%= client.prenom %> <%= client.nom %></strong> 
+                <!-- Affichage du prénom et du nom du client en gras -->
+                - <%= client.email %>
+                <!-- Affichage de l'email du client -->
+            </li>
+
+        <% }); %>
+        <!-- Fermeture de la boucle EJS -->
+    </ul>
+    <!-- Fin de la liste des clients -->
+</body>
+</html>
+<!-- Fin du document HTML -->

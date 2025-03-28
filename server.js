@@ -16,16 +16,48 @@ app.get("/api/message", (req, res) => {
   res.json({ message: "Bienvenue sur le backend" });
 });
 
-// Route pour récupérer tous les utilisateurs
+
+// Route pour récupérer tous les utilisateurs et afficher les données sous forme de tableau HTML
 app.get("/api/utilisateurs", (req, res) => {
+  // Exécution de la requête SQL pour récupérer tous les utilisateurs depuis la base de données
   database.query("SELECT * FROM utilisateurs", (err, results) => {
     if (err) {
+      // Si une erreur survient lors de l'exécution de la requête, on affiche un message d'erreur dans la console
       console.error("Erreur lors de la récupération des utilisateurs :", err);
-      return res.status(500).json({ message: "Erreur serveur" });
+      // Renvoie un code HTTP 500 avec un message d'erreur en HTML
+      return res.status(500).send("<h1>Erreur serveur</h1>");
     }
-    res.json(results);
+    
+    // Création du début du tableau HTML avec un titre
+    let html = "<h1>Liste des utilisateurs</h1>";
+    
+    // Début du tableau HTML avec une ligne d'en-tête définissant les colonnes
+    html += "<table border='1'><thead><tr><th>ID</th><th>Prénom</th><th>Nom</th><th>Email</th><th>Téléphone</th><th>Adresse</th><th>Role</th><th>Date de création</th></tr></thead><tbody>";
+    
+    // Pour chaque utilisateur récupéré, on crée une ligne de tableau avec ses informations
+    results.forEach(user => {
+      html += `
+        <tr>
+          <td>${user.id}</td>           <!-- Affiche l'ID de l'utilisateur -->
+          <td>${user.prenom}</td>       <!-- Affiche le prénom de l'utilisateur -->
+          <td>${user.nom}</td>          <!-- Affiche le nom de l'utilisateur -->
+          <td>${user.email}</td>        <!-- Affiche l'email de l'utilisateur -->
+          <td>${user.telephone}</td>    <!-- Affiche le téléphone de l'utilisateur -->
+          <td>${user.adresse}</td>      <!-- Affiche l'adresse de l'utilisateur -->
+          <td>${user.role}</td>         <!-- Affiche le rôle de l'utilisateur -->
+          <td>${new Date(user.date_creation).toLocaleString()}</td> <!-- Affiche la date de création formatée -->
+        </tr>
+      `;
+    });
+
+    // Fermeture de la section du tableau (fin du <tbody>)
+    html += "</tbody></table>";
+    
+    // Envoie la page HTML avec tous les utilisateurs sous forme de tableau
+    res.send(html);
   });
 });
+
 
 // Route pour récupérer un utilisateur par son ID
 app.get("/api/utilisateurs/:id", (req, res) => {
